@@ -16,9 +16,6 @@ import org.springframework.util.StreamUtils;
 @WebServlet(name = "requestBodyStringServlet", urlPatterns = "/request-bodystring")
 public class RequestBodyStringServlet extends HttpServlet {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -828733054898108255L;
 
 	@Override
