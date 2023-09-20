@@ -87,6 +87,11 @@ public class FrontControllerServletV5 extends HttpServlet {
 	}
 
 	private MyView viewResolver(String viewName) {
+		this.displayMsg();
 		return new MyView("/WEB-INF/views/" + viewName + ".jsp");
+	}
+	
+	private void displayMsg() {
+		System.out.println("call FrontControllerServletV5.displayMsg()");
 	}
 }
