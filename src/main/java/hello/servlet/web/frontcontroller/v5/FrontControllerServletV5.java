@@ -83,7 +83,7 @@ public class FrontControllerServletV5 extends HttpServlet {
 				return adapter;
 			}
 		}
-		throw new IllegalArgumentException("handler adapter를 찾을 수 없습니다. handler=" + handler);
+		throw new IllegalArgumentException("handler adapter를 찾을 수 없습니다... handler=" + handler);
 	}
 
 	private MyView viewResolver(String viewName) {
