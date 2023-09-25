@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <html>
 <head>
     <meta charset="UTF-8">
@@ -10,7 +11,7 @@
 <form action="save" method="post">
     user name: <input type="text" name="username" />
     age:      <input type="text" name="age" />
-    <button type="submit">전송</button>
+    <button type="submit">전송a</button>
     
     <br><input type="text" name="testP" value = "p1">
     <br><input type="text" name="testP" value = "p2">
