@@ -29,6 +29,7 @@ import jakarta.servlet.http.HttpServletResponse;
 @WebServlet(name = "frontControllerServletV5", urlPatterns = "/front-controller/v5/*")
 public class FrontControllerServletV5 extends HttpServlet {
 
+	private static final long serialVersionUID = 7621622988331039235L;
 	private final Map<String, Object> handlerMappingMap = new HashMap<>();
 	private final List<MyHandlerAdapter> handlerAdapters = new ArrayList<>();
 
