@@ -11,6 +11,7 @@ public class NetworkClient {
 	}
 
 	public void setUrl(String url) {
+		System.out.println("call NetworkClient.setUrl()");
 		this.url = url;
 	}
 
