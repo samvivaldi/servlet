@@ -17,6 +17,9 @@ public class ResponseHeaderServlet extends HttpServlet {
 
 	@Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		printHeaders(request);
+		
         //[status-line]
         response.setStatus(HttpServletResponse.SC_OK);
 
@@ -36,6 +39,21 @@ public class ResponseHeaderServlet extends HttpServlet {
         writer.println("ok");
     }
 
+	// Header 모든 정보
+	private void printHeaders(HttpServletRequest request) {
+		System.out.println("--- Headers - start ---");
+		/*
+		 * Enumeration<String> headerNames = request.getHeaderNames(); while
+		 * (headerNames.hasMoreElements()) { String headerName =
+		 * headerNames.nextElement(); System.out.println(headerName + ": " +
+		 * request.getHeader(headerName)); }
+		 */
+		request.getHeaderNames().asIterator()
+				.forEachRemaining(headerName -> System.out.println(headerName + ":" + request.getHeader(headerName)));
+		System.out.println("--- Headers - end ---");
+		System.out.println();
+	}	
+	
     private void content(HttpServletResponse response) {
         //Content-Type: text/plain;charset=utf-8
         //Content-Length: 2
@@ -62,6 +80,7 @@ public class ResponseHeaderServlet extends HttpServlet {
 
 //        response.setStatus(HttpServletResponse.SC_FOUND); //302
 //        response.setHeader("Location", "/basic/hello-form.html");
+    	
         response.sendRedirect("/basic/hello-form.html");
     }
 }
